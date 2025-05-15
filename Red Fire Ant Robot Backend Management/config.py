@@ -6,17 +6,16 @@ options = {
     "port": 8009,
     "current_user": {},
     "token": "",
-    "url": "http://172.30.255.74:8009"
+    "url": "http://172.29.25.34:8009"
    
 }
 # 数据库配置
 mysql = {
-
-    "host": "rm-wz9jcq0826443bm414o.mysql.rds.aliyuncs.com",
+    "host": "rm-bp1b3w6vp958h2rbvio.mysql.rds.aliyuncs.com",
     "user": "root",
     "port": "3306",
-    "password":"gz@84841383",
-    "database": "honghuoyi"
+    "password": "Mmyshi13579",
+    "database": "Redant"
 }
 STATUS_MAPPING = {
     "1": "正常",
@@ -54,11 +53,11 @@ IGNORE_CHECK_LOGIN_URLS = [
     "^/static",
     "^/favicon.ico"
 ]
-# 172.30.255.74 本机ipv4
+# 172.29.25.34 本机ipv4
 domain_url = {
-    'url': "http://172.30.255.74:8009/login",
-    'top_url': "http://172.30.255.74:8009",
-    'cookie_domain': "172.30.255.74"
+    'url': "http://172.29.25.34:8009/login",
+    'top_url': "http://172.29.25.34:8009",
+    'cookie_domain': "172.29.25.34"
 }
 
 AK = 'CVFSH2COP4WCXM6ZFFUR',
