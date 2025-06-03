@@ -3,9 +3,9 @@ var user_login_ops = {
     this.eventBind();
   },
   eventBind: function () {
-    $(".login-card .do-login").click(function () {
-      var login_name = $(".login-card input[name=login_name]").val();
-      var login_pwd = $(".login-card input[name=login_pwd]").val();
+    $(".login-box .do-login").click(function () {
+      var login_name = $(".login-box input[name=login_name]").val();
+      var login_pwd = $(".login-box input[name=login_pwd]").val();
 
       if (login_name === undefined || login_name.length < 1) {
         common_ops.alert("请输入正确的登录用户名");
