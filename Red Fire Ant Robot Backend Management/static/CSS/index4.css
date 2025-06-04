@@ -5,12 +5,12 @@
     align-items:center
 }
 #title1{
-    margin-top: 2%;
+    margin-top: 10%;
     font-size: 50px;
     font-weight: 600;
 }
 #buttonA{
-    margin-top: 15px;
+    margin-top: 80px;
     padding: 6px 20px;
     color: #25a5f7;
     border-radius: 30px;
@@ -19,6 +19,10 @@
     font-size: 30px;
     text-decoration: none;
 }
+#buttonA {
+    transition: all 0.3s ease;
+}
+
 #buttonA:hover {
     color: #fff;
     background-color: #25a5f7;
