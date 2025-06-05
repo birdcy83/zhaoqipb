@@ -1,5 +1,5 @@
 {% extends "../common/layouts.html" %}
-{%block title %}红火蚁灾情防治及机器人调度平台{% end %}
+{%block title %}朝气鹏勃农机调度平台{% end %}
 {% block content %}
 <script src="https://webapi.amap.com/maps?v=2.0&key=6c889de4ee1c73ea291466419487e294"></script>
 <!-- <script type="text/javascript" src='https://a.amap.com/jsapi_demos/static/demo-center/js/prety-json.js'></script>
@@ -795,11 +795,11 @@
                             if (item.workstate === 0) {
                                 workstateText = '已关机';
                             } else if (item.workstate === 1) {
-                                workstateText = '正常巡航中...';
+                                workstateText = '开机待命中...';
                             } else if (item.workstate === 2) {
-                                workstateText = '消杀中...';
+                                workstateText = '授粉中...';
                             } else if (item.workstate === 3) {
-                                workstateText = '返回起点中';
+                                workstateText = '充电中';
                             } else if (item.workstate === 4) {
                                 workstateText = '待机暂停中';
                             }
