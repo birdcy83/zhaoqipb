@@ -1,42 +1,119 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../static/CSS/login.css">
-    <!-- 图标字体库 -->
-    <link rel="stylesheet" href="../static/paggage/iconfont.css">
-    <title>登录页面</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../static/CSS/login.css" />
+  <!-- 图标字体库 -->
+  <link rel="stylesheet" href="../static/paggage/iconfont.css" />
+  <title>登录页面</title>
 </head>
 <body>
-    <div class="login-box">
-        <div class="title">朝气鹏勃农机调度平台</div>
-        <img src="../static/photos/login_photo.png" class="img">
-        <div class="form box-style" role="form">
-            <input id="name-input" class="form-text sub" type="text" name="login_name" placeholder="请输入用户名">
-            <input id="pwd-input" class="form-pwd sub" type="password" name="login_pwd" placeholder="请输入密码">
-            <input id="btn" class="form-btn do-login" type="button"  value="立即登录">
+  <div
+    class="login-box"
+    style="
+      max-width: 90%;
+      width: 400px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      background: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    "
+  >
+    <div style="text-align: center; margin-bottom: 30px">
+      <div style="display: inline-block; vertical-align: middle">
+        <img
+          src="../static/photos/logo.png"
+          style="height: 40px; margin-right: 15px; vertical-align: middle"
+        />
+        <div
+          class="title"
+          style="
+            display: inline-block;
+            font-size: 24px;
+            color: #1ab394;
+            vertical-align: middle;
+          "
+        >
+          朝气鹏勃农机调度平台
         </div>
+      </div>
     </div>
 
+    <div class="form box-style" role="form">
+      <input
+        id="name-input"
+        class="form-text sub"
+        type="text"
+        name="login_name"
+        placeholder="请输入用户名"
+        style="
+          width: 100%;
+          padding: 8px 12px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          transition: all 0.3s;
+        "
+      />
+      <input
+        id="pwd-input"
+        class="form-pwd sub"
+        type="password"
+        name="login_pwd"
+        placeholder="请输入密码"
+        style="
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 20px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          transition: all 0.3s;
+        "
+      />
+      <input
+        id="btn"
+        class="form-btn do-login"
+        type="button"
+        value="立即登录"
+        style="
+          width: calc(100% - 24px);
+          padding: 12px;
+          margin: 0 12px;
+          background: #1ab394;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: all 0.3s;
+        "
+      />
+    </div>
+  </div>
 </body>
 
-
-<script type="text/javascript" src="{{ static_url('plugins/jquery-2.1.1.js') }}"></script>
+<script
+  type="text/javascript"
+  src="{{ static_url('plugins/jquery-2.1.1.js') }}"
+></script>
 <script src="{{static_url('JS/common.js')}}"></script>
 <script src="{{static_url('JS/login.js')}}"></script>
-<script  src="{{ static_url('bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ static_url('bootstrap/bootstrap.min.js') }}"></script>
 <script src="{{ static_url('plugins/layer/layer.js') }}"></script>
 
 <script>
-   //禁用浏览器的后退按钮
-    document.addEventListener('keydown', function(event){
-    if (event.key == 'Backspace') {
-            event.preventDefault();
-    }})
+  //禁用浏览器的后退按钮
+  document.addEventListener("keydown", function (event) {
+    if (event.key == "Backspace") {
+      event.preventDefault();
+    }
+  });
 
+  history.pushState(null, document.title, location.href);
+  window.addEventListener("popstate", function (event) {
     history.pushState(null, document.title, location.href);
-        window.addEventListener('popstate', function (event) {
-            history.pushState(null, document.title, location.href);
-        });
+  });
 </script>
-
-
