@@ -151,13 +151,13 @@ var chartDom2 = document.getElementById('2');
 var myChart2 = echarts.init(chartDom2);
 var option2 = {
     title: {
-        text: '近年来全球与广东治理投入规模'
+        text: '近年来全球与广东种植投入规模'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data: ['广东治理投入规模', '全国治理投入规模', ],
+        data: ['广东种植投入规模', '全国种植投入规模', ],
         right:'15px',
         top:'1px'
     },
@@ -182,13 +182,13 @@ var option2 = {
     },
     series: [
         {
-            name: '广东治理投入规模',
+            name: '广东种植投入规模',
             type: 'line',
            
             data: [2397.81, 3119.94, 3140.64, 3083.93, 4925.18, 5643.39]
         },
         {
-            name: '全国治理投入规模',
+            name: '全国种植投入规模',
             type: 'line',
             
             data: [3268.5, 4183.51, 10912.05,12378.57,15340.54,18451.51]
@@ -259,7 +259,7 @@ option3 = {
         },
         // {
         //     type: 'value',
-        //     name: '发现蚁巢的数量/窝',
+        //     name: '发现授粉区域个数/窝',
         //     min: 0,
         //     max: 30,
         //     interval: 5,
@@ -282,7 +282,7 @@ option3 = {
             ]
         },
         // {
-        //     name: '发现蚁巢的数量',
+        //     name: '发现授粉区域个数',
         //     type: 'line',
         //     yAxisIndex: 1,
         //     tooltip: {
@@ -301,13 +301,13 @@ var chartDom4 = document.getElementById('4');
 var myChart4 = echarts.init(chartDom4);
 var option4 = {
     title: {
-        text: '蚁巢数量图'
+        text: '授粉区域数量图'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data: ['蚁巢的数量']
+        data: ['授粉区域个数']
     },
     grid: {
         left: '3%',
@@ -327,19 +327,19 @@ var option4 = {
     },
     yAxis: {
         type: 'value',
-        name: '窝数',
+        name: '个数',
         min: 0,
         max: 50,
         interval: 5,
     },
     series: [
           {
-            name: '蚁巢的数量',
+            name: '授粉区域个数',
             type: 'line',
             // yAxisIndex: 1,
             tooltip: {
                 valueFormatter: function (value) {
-                    return value + ' 窝';
+                    return value + ' 个';
                 }
             },
             data: [20,30,14,34,27,42,46,20,18,34,14,10]
