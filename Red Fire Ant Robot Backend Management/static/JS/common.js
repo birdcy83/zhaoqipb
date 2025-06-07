@@ -119,6 +119,15 @@ var common_ops = {
     },
     alert:function( msg ,cb ){
         layer.alert( msg,{
+            title: false,
+            closeBtn: 0,
+            skin: 'layui-layer-success',
+            btn: ['确定'],
+            btnAlign: 'c',
+            icon: 1,
+            anim: 5,
+            shade: 0.3,
+            shadeClose: true,
             yes:function( index ){
                 if( typeof cb == "function" ){
                     cb();
