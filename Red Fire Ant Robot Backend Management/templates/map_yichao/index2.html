@@ -3,10 +3,33 @@ end %} {% block content %}
 <script src="https://webapi.amap.com/maps?v=2.0&key=6c889de4ee1c73ea291466419487e294"></script>
 <style>
   /* 关于蚁巢信息弹窗的css如下 */
+  .custom-info-window {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 300px;
+  }
+  
   .custom-info-window img {
     height: 200px;
     display: block;
     margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-info-window p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .custom-info-window p:first-child {
+    font-weight: bold;
+    color: #1ab394;
+    font-size: 16px;
   }
 
   .toggleBtn {
