@@ -437,5 +437,26 @@
         fetchData();
       });
     </script>
+
+    <!-- 添加Coze智能体SDK -->
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+    <script>
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: "7516908508358131747",
+        },
+        componentProps: {
+          title: "农机调度助手", // 修改为更符合项目的标题
+        },
+        auth: {
+          type: "token",
+          token:
+            "pat_3GD3OJeR1b2FmusaPsVjTM8Gsl7sKAtnqyvzuOFA0y1nraG9STg94fWyHSeanp5p",
+          onRefreshToken: function () {
+            return "pat_3GD3OJeR1b2FmusaPsVjTM8Gsl7sKAtnqyvzuOFA0y1nraG9STg94fWyHSeanp5p";
+          },
+        },
+      });
+    </script>
   </body>
 </html>
