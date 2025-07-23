@@ -111,6 +111,84 @@
         background-color: #e8e8e8;
         color: rgba(0, 0, 0, 0.85);
       }
+
+      /* 导航栏样式自定义 */
+      .navbar-default.navbar-static-side {
+        background-color: #f8f9fa !important;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05) !important;
+      }
+      
+      .sidebar-collapse {
+        background-color: #f8f9fa !important;
+      }
+      
+      /* 主内容区域颜色对比 */
+      #page-wrapper {
+        background-color: white !important;
+      }
+      
+      /* 用户信息展示区域背景色 */
+      .nav-header {
+        background-color: #e8f5e8 !important;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 10px;
+      }
+      
+      .nav-header .profile-element {
+        background-color: transparent !important;
+      }
+      
+      /* 导航栏字体颜色 */
+      .nav.metismenu li a {
+        color: #000000 !important;
+        transition: all 0.3s ease !important;
+        background-color: transparent !important;
+      }
+      
+      .nav.metismenu li a:hover {
+        color: #000000 !important;
+        background-color: #e8f5e8 !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .nav.metismenu li a:focus {
+        color: #000000 !important;
+        background-color: #e8f5e8 !important;
+        outline: none !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .nav.metismenu li.active > a {
+        color: #000000 !important;
+        background-color: #d4e7d4 !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .nav.metismenu li.active > a:hover,
+      .nav.metismenu li.active > a:focus {
+        color: #000000 !important;
+        background-color: #d4e7d4 !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* 移除默认的Bootstrap过渡效果 */
+      .nav > li > a:hover,
+      .nav > li > a:focus {
+        text-decoration: none !important;
+        background-color: transparent !important;
+      }
+      
+      /* 用户名和角色文字颜色 */
+      .profile-element .block,
+      .profile-element .text-muted {
+        color: #000000 !important;
+      }
+      
+      /* 导航图标颜色 */
+      .nav.metismenu li a i {
+        color: #000000 !important;
+      }
     </style>
   </head>
 
@@ -133,7 +211,7 @@
                 <img
                   alt="image"
                   class="rounded-circle"
-                  src="{{ static_url('photos/daifu.jpeg') }}"
+                  src="{{ static_url('photos/szu.png') }}"
                   style="width: 80px; height: 80px"
                 />
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -451,9 +529,9 @@
         auth: {
           type: "token",
           token:
-            "pat_3GD3OJeR1b2FmusaPsVjTM8Gsl7sKAtnqyvzuOFA0y1nraG9STg94fWyHSeanp5p",
+            "pat_QhGrCzYt12SMs29XQNW8IcPOD219WtADZxxhq8WBSJ5y6AC4FCSDljulk1NKRrHf",
           onRefreshToken: function () {
-            return "pat_3GD3OJeR1b2FmusaPsVjTM8Gsl7sKAtnqyvzuOFA0y1nraG9STg94fWyHSeanp5p";
+            return "pat_QhGrCzYt12SMs29XQNW8IcPOD219WtADZxxhq8WBSJ5y6AC4FCSDljulk1NKRrHf";
           },
         },
       });
