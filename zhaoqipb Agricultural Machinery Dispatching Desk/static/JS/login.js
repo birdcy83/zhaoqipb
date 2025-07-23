@@ -28,7 +28,7 @@ var user_login_ops = {
       //     common_ops.alert(res.msg, callback);
       // });
       $.ajax({
-        url: "http://172.29.25.17:8009/login",
+        url: "http://192.168.10.229:8009/login",
         type: "POST",
         contentType: "application/json", // 设置内容类型为 JSON
         data: JSON.stringify({ login_name: login_name, login_pwd: login_pwd }), // 序列化为 JSON

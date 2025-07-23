@@ -6,7 +6,7 @@ options = {
     "port": 8009,
     "current_user": {},
     "token": "",
-    "url": "http://172.29.25.17:8009"
+    "url": "http://192.168.10.229:8009"
    
 }
 # 数据库配置
@@ -53,11 +53,11 @@ IGNORE_CHECK_LOGIN_URLS = [
     "^/static",
     "^/favicon.ico"
 ]
-# 172.29.25.17 本机ipv4
+# 192.168.10.229 本机ipv4
 domain_url = {
-    'url': "http://172.29.25.17:8009/login",
-    'top_url': "http://172.29.25.17:8009",
-    'cookie_domain': "172.29.25.17"
+    'url': "http://192.168.10.229:8009/login",
+    'top_url': "http://192.168.10.229:8009",
+    'cookie_domain': "192.168.10.229"
 }
 
 AK = 'CVFSH2COP4WCXM6ZFFUR',
