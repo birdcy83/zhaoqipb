@@ -167,6 +167,10 @@ end %} {% block content %}
       console.log("responseData2:", responseData2);
       points = responseData2["yichao"];
 
+      // 预先按纬度排序，确定上方两个点
+      var sortedByLatitude = points.sort((a, b) => b.latitude - a.latitude);
+      var topTwoPointIds = [sortedByLatitude[0].id, sortedByLatitude[1].id];
+
       points.forEach(function (point) {
         var marker = new AMap.Marker({
           position: [point.longitude, point.latitude],
@@ -201,11 +205,32 @@ end %} {% block content %}
               ')">授粉</button>';
           }
 
+          // 判断是否为上方两个标记点，使用硬编码图片
+          var imageUrl;
+          
+          if (point.id === topTwoPointIds[0]) {
+            // 最上方的点使用第一张硬编码图片
+            imageUrl = '/static/photos/chunsharen1.jpg';
+          } else if (point.id === topTwoPointIds[1]) {
+            // 第二上方的点使用第二张硬编码图片
+            imageUrl = '/static/photos/chunsharen2.jpg';
+          } else {
+            // 其他点使用数据库中的图片
+            imageUrl = 'data:image/jpeg;base64,' + point.image;
+          }
+
           content +=
-            '<img class="info-window-image" src="data:image/jpeg;base64,' +
-            point.image +
+            '<img class="info-window-image" src="' +
+            imageUrl +
             '" alt="image" />' +
             "</div>";
+
+          // 原先从数据库获取图片的代码（已注释）
+          // content +=
+          //   '<img class="info-window-image" src="data:image/jpeg;base64,' +
+          //   point.image +
+          //   '" alt="image" />' +
+          //   "</div>";
 
           var infoWindow = new AMap.InfoWindow({
             content: content,
